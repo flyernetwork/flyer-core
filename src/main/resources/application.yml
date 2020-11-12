@@ -1,0 +1,9 @@
+spring:
+    mvc:
+        servlet:
+            path: /flyercore
+    data:
+        rest:
+            detection-strategy: annotated
+        mongodb:
+        uri: mongodb://admin:admin@localhost:27017/flyercore
