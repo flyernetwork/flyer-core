@@ -1,6 +1,6 @@
 package br.com.flyernetwork.core.flyercore.domain;
 
-import java.math.BigInteger;
+import org.springframework.data.annotation.Id;
 
 import lombok.Data;
 
@@ -15,6 +15,7 @@ public class User {
         this.name = name;
     }
     
+    @Id
     private String id;
     private String name;
     

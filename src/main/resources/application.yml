@@ -6,4 +6,6 @@ spring:
         rest:
             detection-strategy: annotated
         mongodb:
-        uri: mongodb://admin:admin@localhost:27017/flyercore
+            database: flyernetwork
+            uri: mongodb://admin:admin@localhost:27017/?authSource=admin
+
