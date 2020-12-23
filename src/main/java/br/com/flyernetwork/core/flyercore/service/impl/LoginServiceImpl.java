@@ -1,5 +1,6 @@
 package br.com.flyernetwork.core.flyercore.service.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,12 @@ public class LoginServiceImpl implements LoginService {
     @Override
     public User findUserByName(String username) {
         return this.userRepository.findByName(username).get(0);
+    }
+
+    @Override
+    public User findUserByEmailAndPassword(String email, String password) {
+        List<User> foundUsers = this.userRepository.findByEmailAndPassword(email, password);
+        return foundUsers.size() > 0 ? foundUsers.get(0) : null;
     }
 
 }

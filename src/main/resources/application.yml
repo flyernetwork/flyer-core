@@ -9,3 +9,8 @@ spring:
             database: flyernetwork
             uri: mongodb://admin:admin@localhost:27017/?authSource=admin
 
+amazonProperties:
+    endpointUrl: https://s3.sa-east-1.amazonaws.com
+    accessKey: AKIA3HHQ3SN5Z3U5CEH7
+    secretKey: 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
+    bucketName: tulio-buck01
