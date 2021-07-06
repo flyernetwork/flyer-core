@@ -7,7 +7,7 @@ import java.util.Set;
 import br.com.flyernetwork.core.flyercore.domain.User;
 
 public interface UserService {
-    public List<User> getAllUsers();
+    public Iterable<User> getAllUsers();
     public User createUser(User user);
     public User updateUser(User user);
     public void deleteUser(String userId);

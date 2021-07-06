@@ -42,9 +42,6 @@ public class UserServiceImpl implements UserService {
         User u1 = user1.get();
         User u2 = user2.get();
 
-        u1.addFriend(u2.getId());
-        u2.addFriend(u1.getId());
-        
         this.userRepository.save(u1);
         this.userRepository.save(u2);
 
@@ -78,16 +75,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAllUsers() {
-        // return this.userRepository.findAllProjectedBy();
-        return this.userRepository.findAll();
+    public Iterable<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
     @Override
     public List<User> getAllUserFriends(String userId) {
         Optional<User> user = this.userRepository.findById(userId);
-        if(!user.isPresent())return null;
-        List<User> friends = this.userRepository.findByIdIn(user.get().getFriends());
-        return friends;
+        if (!user.isPresent()) return null;
+        return null;
     }
 }

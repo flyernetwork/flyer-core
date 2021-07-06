@@ -42,7 +42,7 @@ public class UserResource {
     }
 
     @GetMapping(value = "")
-    public List<User> getAllUsers() {
+    public Iterable<User> getAllUsers() {
         return this.userService.getAllUsers();
     }
 
@@ -54,7 +54,7 @@ public class UserResource {
 
     @GetMapping(value = "/street/{streetname}")
     public User getUserByStreetname(@PathVariable(value = "streetname") String streetname) {
-        return this.userRepo.findByStreetName(streetname).get(0);
+        return null;
     }
 
     // @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)

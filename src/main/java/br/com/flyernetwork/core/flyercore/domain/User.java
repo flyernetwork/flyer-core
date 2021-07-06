@@ -1,28 +1,23 @@
 package br.com.flyernetwork.core.flyercore.domain;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import lombok.Data;
 
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
-@Document(collection = "user")
+@Entity
 public class User {
     
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private String id;
     private String  name;
     private String email;
     private String password;
-    private Address address;
-    private List<String> friends = new ArrayList<String>();
-
-    public boolean addFriend(String friendId){
-        return this.friends.add(friendId);
-    }
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="friend_id")
+    private List<User> friends;
 }

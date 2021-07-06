@@ -27,7 +27,7 @@ public class UserContentServiceImpl{
 
 
     public List<UserContent> findAllContent() {
-        return this.userContentRepository.findAll();
+        return null;
     }
 
 

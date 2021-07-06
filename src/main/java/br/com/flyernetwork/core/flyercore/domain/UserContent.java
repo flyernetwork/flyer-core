@@ -2,16 +2,19 @@ package br.com.flyernetwork.core.flyercore.domain;
 
 import java.util.Date;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 @Data
-@Document
+@Entity
 public class UserContent{
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private String id;
     private String userId;
     private String title;
