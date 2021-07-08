@@ -1,13 +1,13 @@
 spring:
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/flyernetwork
+    url: jdbc:mysql://flyer-network-db.cir21neqnmod.sa-east-1.rds.amazonaws.com:3306/flyernetwork
     username: root
-    password: root
+    password: rootroot
     driver-class: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
   mvc:
     servlet:
       path: /flyercore

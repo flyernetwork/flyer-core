@@ -17,7 +17,7 @@ public class User {
     private String  name;
     private String email;
     private String password;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="friend_id")
-    private List<User> friends;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name="friend_id")
+//    private List<User> friends;
 }
