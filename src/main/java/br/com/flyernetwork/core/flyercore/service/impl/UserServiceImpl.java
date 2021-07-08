@@ -55,10 +55,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User updateUser(User user) {
-        User foundUser = this.userRepository.findById(user.getId())
+/*        User foundUser = this.userRepository.findById(user.getId())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "status"));
         foundUser = user;
-        return this.userRepository.save(foundUser);
+        return this.userRepository.save(foundUser);*/
+
+        return null;
 
     }
 

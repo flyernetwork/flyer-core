@@ -15,7 +15,7 @@ public class UserContent{
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private String id;
+    private Integer id;
     private String userId;
     private String title;
     private String userContent;

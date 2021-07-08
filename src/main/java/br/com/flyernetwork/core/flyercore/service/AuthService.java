@@ -3,7 +3,7 @@ package br.com.flyernetwork.core.flyercore.service;
 import java.util.Optional;
 
 import br.com.flyernetwork.core.flyercore.domain.User;
-public interface LoginService {
+public interface AuthService {
 
     public Optional<User> findUser(User user);
     public User findUserByName(String username);

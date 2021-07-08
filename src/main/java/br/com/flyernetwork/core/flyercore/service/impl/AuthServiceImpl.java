@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import br.com.flyernetwork.core.flyercore.domain.User;
 import br.com.flyernetwork.core.flyercore.repository.UserRepository;
-import br.com.flyernetwork.core.flyercore.service.LoginService;
+import br.com.flyernetwork.core.flyercore.service.AuthService;
 
 @Service
-public class LoginServiceImpl implements LoginService {
+public class AuthServiceImpl implements AuthService {
 
     @Autowired
     private UserRepository userRepository;

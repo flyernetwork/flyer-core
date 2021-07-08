@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/healthCheck")
+@RequestMapping("/healthcheck")
 public class HealthCheckResource {
 
     @GetMapping
